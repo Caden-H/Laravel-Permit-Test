@@ -2,6 +2,8 @@
 
 Small demo API matching gov-tech style CRUD + a domain action (**approve**) + optional **Twilio SMS**. Includes a one-file Blade UI.
 
+![Laravel Permits API](images/screenshot.png)
+
 ## Stack
 - PHP 8.2+, Laravel, Eloquent ORM
 - PostgreSQL (dev), SQLite for tests
