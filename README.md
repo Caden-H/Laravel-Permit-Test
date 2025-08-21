@@ -87,10 +87,7 @@ Feature tests cover valid create (201) and invalid payload (422). Run:
   - Config is read from `config/services.php` (`services.twilio.*`).
   - Failures are logged as `SMS failed` in `storage/logs/laravel-*.log`.
 
-## Quick architecture (talk track)
+## Basic Architecture
 Request → **Route** (`routes/api.php`) → **Controller** → **Eloquent Model** (DB) → JSON **Response**.  
 Validation uses `$request->validate(...)` and returns **422** with field errors for bad input.  
 Twilio is wrapped in `App\Services\TwilioSms` so it can no-op in dev and be faked in tests.
-
-## SQL Server (interview note)
-To target MSSQL instead of Postgres: enable Microsoft’s `pdo_sqlsrv`/`sqlsrv` PHP drivers and set `DB_CONNECTION=sqlsrv` in `.env`, then migrate.
